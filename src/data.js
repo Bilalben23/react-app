@@ -1,0 +1,25 @@
+const cardData = [
+        { id: 1, title: "title", subtitle: "subtitle", tags: ["ERP", "Commerce"], description: "Module central pour gérer les achats, les ventes, les stocks et les règlements clients/fournisseurs." },
+        { id: 2, title: "title", subtitle: "subtitle", tags: ["ERP", "Commerce"], description: "Module central pour gérer les achats, les ventes, les stocks et les règlements clients/fournisseurs." },
+        { id: 3, title: "title", subtitle: "subtitle", tags: ["ERP", "Commerce"], description: "Module central pour gérer les achats, les ventes, les stocks et les règlements clients/fournisseurs." },
+        { id: 4, title: "title", subtitle: "subtitle", tags: ["ERP", "Commerce"], description: "Module central pour gérer les achats, les ventes, les stocks et les règlements clients/fournisseurs." },
+        { id: 5, title: "title", subtitle: "subtitle", tags: ["ERP", "Commerce"], description: "Module central pour gérer les achats, les ventes, les stocks et les règlements clients/fournisseurs." },
+        { id: 6, title: "title", subtitle: "subtitle", tags: ["ERP", "Commerce"], description: "Module central pour gérer les achats, les ventes, les stocks et les règlements clients/fournisseurs." },
+        { id: 7, title: "title", subtitle: "subtitle", tags: ["ERP", "Commerce"], description: "Module central pour gérer les achats, les ventes, les stocks et les règlements clients/fournisseurs." },
+        { id: 8, title: "title", subtitle: "subtitle", tags: ["ERP", "Commerce"], description: "Module central pour gérer les achats, les ventes, les stocks et les règlements clients/fournisseurs." },
+        { id: 9, title: "title", subtitle: "subtitle", tags: ["ERP", "Commerce"], description: "Module central pour gérer les achats, les ventes, les stocks et les règlements clients/fournisseurs." },
+        { id: 10, title: "title", subtitle: "subtitle", tags: ["ERP", "Commerce"], description: "Module central pour gérer les achats, les ventes, les stocks et les règlements clients/fournisseurs." },
+        { id: 11, title: "title", subtitle: "subtitle", tags: ["ERP", "Commerce"], description: "Module central pour gérer les achats, les ventes, les stocks et les règlements clients/fournisseurs." },
+        { id: 12, title: "title", subtitle: "subtitle", tags: ["ERP", "Commerce"], description: "Module central pour gérer les achats, les ventes, les stocks et les règlements clients/fournisseurs." },
+        { id: 13, title: "title", subtitle: "subtitle", tags: ["ERP", "Commerce"], description: "Module central pour gérer les achats, les ventes, les stocks et les règlements clients/fournisseurs." },
+        { id: 14, title: "title", subtitle: "subtitle", tags: ["ERP", "Commerce"], description: "Module central pour gérer les achats, les ventes, les stocks et les règlements clients/fournisseurs." },
+        { id: 15, title: "title", subtitle: "subtitle", tags: ["ERP", "Commerce"], description: "Module central pour gérer les achats, les ventes, les stocks et les règlements clients/fournisseurs." },
+        { id: 16, title: "title", subtitle: "subtitle", tags: ["ERP", "Commerce"], description: "Module central pour gérer les achats, les ventes, les stocks et les règlements clients/fournisseurs." },
+        { id: 17, title: "title", subtitle: "subtitle", tags: ["ERP", "Commerce"], description: "Module central pour gérer les achats, les ventes, les stocks et les règlements clients/fournisseurs." },
+        { id: 18, title: "title", subtitle: "subtitle", tags: ["ERP", "Commerce"], description: "Module central pour gérer les achats, les ventes, les stocks et les règlements clients/fournisseurs." },
+        { id: 19, title: "title", subtitle: "subtitle", tags: ["ERP", "Commerce"], description: "Module central pour gérer les achats, les ventes, les stocks et les règlements clients/fournisseurs." },
+        { id: 20, title: "title", subtitle: "subtitle", tags: ["ERP", "Commerce"], description: "Module central pour gérer les achats, les ventes, les stocks et les règlements clients/fournisseurs." },
+        { id: 21, title: "title", subtitle: "subtitle", tags: ["ERP", "Commerce"], description: "Module central pour gérer les achats, les ventes, les stocks et les règlements clients/fournisseurs." },
+];
+
+export default cardData;
