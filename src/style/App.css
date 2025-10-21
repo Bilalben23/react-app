@@ -1,17 +1,27 @@
-body{
+body {
   width: 100%;
   height: 100%;
   background-color: #E9F6FF;
   background-size: 600% 600%;
   animation: bgColorAnimation 8s infinite;
 }
-.color{
+
+.color {
   background-color: #E9F6FF;
 }
+
 @keyframes bgColorAnimation {
-  0%   { background-position: 0% 50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* Fade-in + slide from right */
@@ -20,24 +30,30 @@ body{
     opacity: 0;
     transform: translateX(40px);
   }
+
   100% {
     opacity: 1;
     transform: translateX(0);
   }
 }
+
 .animate-fade-in-right {
   animation: fade-in-right 1s ease-out;
 }
 
 /* Gentle bounce for icons */
 @keyframes bounce-slow {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-5px);
   }
 }
+
 .animate-bounce-slow {
   animation: bounce-slow 2s infinite;
 }
@@ -48,38 +64,39 @@ body{
     opacity: 0;
     transform: translateY(20px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
 .animate-fade-in-up {
   animation: fade-in-up 1s ease-out;
 }
 
 /* Gentle bounce animation */
 @keyframes bounce-slow {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-5px);
   }
 }
+
 /* Fade-in + slide up */
 @keyframes fade-in-up {
   0% {
     opacity: 0;
     transform: translateY(20px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
-.animate-fade-in-up {
-  animation: fade-in-up 1s ease-out;
-}
-
-
-

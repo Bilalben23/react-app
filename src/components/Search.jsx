@@ -1,15 +1,12 @@
 function Search({ value, onSearchChange }) {
   return (
-    <div className="flex justify-center animate-fade-in-up">
+    <div className="flex justify-center flex-1 animate-fade-in-up">
       <input
         type="search"
         name="search"
         id="search"
-        placeholder="Search for solutions ..."
-        className="min-w-48 w-96 h-10 rounded border-b-2 border-secondary100 
-        bg-transparent outline-0 px-4 text-gray-700 placeholder-gray-400
-        transition-all duration-500 ease-in-out 
-        focus:border-secondary"
+        placeholder="Search for solutions..."
+        className="h-10 px-4 text-gray-700 placeholder-gray-400 transition-colors duration-500 ease-in-out bg-transparent border-b-2 rounded min-w-48 w-96 border-secondary-100 outline-0 focus:border-secondary"
         onChange={(e) => onSearchChange(e.target.value)}
         value={value}  
       />

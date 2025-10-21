@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { ReactTyped } from "react-typed";
@@ -34,21 +34,23 @@ function Hero() {
     const matchesTag = selectedTag ? card.tags.includes(selectedTag) : true;
 
     return matchesSearch && matchesTag;
-  });
+  })
 
 
 
-  
+
   return (
-    <div className="flex-1 mb-2 border-2 border-red-500">
+    <div className="flex-1">
       {/* Header */}
-      <div className="grid grid-cols-3 gap-4 p-4">
+      <div className="flex items-center justify-between gap-4 p-4">
         <Logo />
-        <Search value={search} onSearchChange={handleSearchChange} />
-        <Contact />
+        <Search
+          value={search}
+          onSearchChange={handleSearchChange}
+        />
       </div>
 
-      {/* Hero Section */} 
+      {/* Hero Section */}
       <div className="space-y-12">
         <div className="flex flex-col items-center">
           <img src="/WebDevelopment.gif" alt="img-hero" />
