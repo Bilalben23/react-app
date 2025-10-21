@@ -1,4 +1,7 @@
-import { useMemo, useState } from "react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { ReactTyped } from "react-typed";
@@ -6,7 +9,8 @@ import Card from "./Card";
 import cardData from "../data";
 import Search from "./Search";
 import Logo from "./Logo";
-import Contact from "./Contact";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
 
 function Hero() {
   const [search, setSearch] = useState("");
@@ -37,12 +41,10 @@ function Hero() {
   })
 
 
-
-
   return (
     <div className="flex-1">
       {/* Header */}
-      <div className="flex items-center justify-between gap-4 p-4">
+      <div className="flex flex-wrap items-center justify-between gap-4 p-4">
         <Logo />
         <Search
           value={search}
@@ -52,9 +54,13 @@ function Hero() {
 
       {/* Hero Section */}
       <div className="space-y-12">
+
         <div className="flex flex-col items-center">
-          <img src="/WebDevelopment.gif" alt="img-hero" />
-          <h2 className="text-3xl font-bold text-center text-sky-800">
+          <img
+            src="/webDevelopment.gif"
+            alt="img-hero"
+          />
+          <h3 className="text-xl font-bold text-center sm:text-2xl md:text-3xl text-sky-800 ">
             Explore Our
             <ReactTyped
               strings={[
@@ -68,8 +74,10 @@ function Hero() {
               smartBackspace
               showCursor
             />
-          </h2>
+          </h3>
         </div>
+
+
 
         {/* Cards */}
         {filteredCards.length > 0 ? (
@@ -90,29 +98,59 @@ function Hero() {
 
             <Swiper
               modules={[Autoplay, Pagination, Navigation]}
+              loop={false}
               spaceBetween={10}
-              slidesPerView={3}
-              loop={true}
               autoplay={{
                 delay: 2500,
                 disableOnInteraction: false,
               }}
-              navigation={true}
-              className="h-48"
+              navigation={{
+                prevEl: ".swiper-prev",
+                nextEl: ".swiper-next"
+              }}
+
+              breakpoints={{
+                640: {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+                },
+                768: {
+                  slidesPerView: 3,
+                  spaceBetween: 30,
+                },
+                1024: {
+                  slidesPerView: 4,
+                  spaceBetween: 40,
+                },
+              }}
+              className="!p-3 relative container mx-auto"
             >
               {filteredCards.map((card, index) => (
                 <SwiperSlide key={index}>
-                  <div className="transition-transform duration-300 transform hover:scale-105 ms-14">
-                    <Card
-                      title={card.title}
-                      subtitle={card.subtitle}
-                      tags={card.tags}
-                      description={card.description}
-                    />
-                  </div>
+                  <Card
+                    title={card.title}
+                    subtitle={card.subtitle}
+                    tags={card.tags}
+                    description={card.description}
+                  />
                 </SwiperSlide>
               ))}
+              <div className="absolute top-0 right-0 w-5 h-full pointer-events-none bg-gradient-to-l from-black/5 -z-1 to-transparent rounded-r-2xl" />
+              <div className="absolute top-0 left-0 w-5 h-full pointer-events-none bg-gradient-to-r from-black/5 -z-1 to-transparent rounded-l-2xl" />
+              <button
+                type="button"
+                className="absolute z-10 size-10  -translate-y-1/2 rounded-full shadow-lg hover:shadow-none left-1 bg-sky-900 swiper-prev top-1/2 flex items-center justify-center hover:scale-[0.97] transition-all hover:opacity-90"
+              >
+                <ChevronLeft size={25} className="text-white" />
+              </button>
+              <button
+                type="button"
+                className="absolute z-10 size-10  -translate-y-1/2 rounded-full shadow-lg hover:shadow-none right-1 bg-sky-900 swiper-next top-1/2 flex items-center justify-center hover:scale-[0.97] transition-all hover:opacity-90"
+              >
+                <ChevronRight className="text-white" />
+              </button>
             </Swiper>
+
           </div>
         ) : (
           <div className="flex flex-col items-center justify-center mt-4 space-y-4 animate-fade-in-up">

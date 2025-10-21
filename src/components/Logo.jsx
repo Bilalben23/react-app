@@ -15,10 +15,10 @@ function Logo() {
         animate={{ rotate: [0, 10, -10, 0] }}
         transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
       />
-      <h3 className="text-2xl font-semibold text-primary">
-        <span className="text-3xl font-bold text-secondary">l</span>
+      <h2 className="text-xl font-semibold sm:text-2xl md:text-3xl text-primary">
+        <span className="text-2xl font-bold sm:text-3xl md:text-4xl text-secondary">l</span>
         ogo
-      </h3>
+      </h2>
     </motion.div>
   )
 }
