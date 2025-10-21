@@ -36,8 +36,11 @@ function Hero() {
     return matchesSearch && matchesTag;
   });
 
+
+
+  
   return (
-    <div className="w-full">
+    <div className="flex-1 mb-2 border-2 border-red-500">
       {/* Header */}
       <div className="grid grid-cols-3 gap-4 p-4">
         <Logo />
@@ -76,8 +79,7 @@ function Hero() {
                     setSelectedTag(null);
                     setSearch(""); // clear search input
                   }}
-                  className="px-4 py-2 bg-transparent text-secondary100 border border-secondary100 rounded-full 
-                  hover:bg-secondary100 hover:text-white transition-all duration-300 text-sm shadow-md"
+                  className="px-4 py-2 text-sm transition-all duration-300 bg-transparent border rounded-full shadow-md text-secondary100 border-secondary100 hover:bg-secondary100 hover:text-white"
                 >
                   Show All
                 </button>
@@ -98,7 +100,7 @@ function Hero() {
             >
               {filteredCards.map((card, index) => (
                 <SwiperSlide key={index}>
-                  <div className="transition-transform transform hover:scale-105 duration-300 ms-14">
+                  <div className="transition-transform duration-300 transform hover:scale-105 ms-14">
                     <Card
                       title={card.title}
                       subtitle={card.subtitle}
@@ -111,8 +113,8 @@ function Hero() {
             </Swiper>
           </div>
         ) : (
-          <div className="flex flex-col items-center justify-center mt-4 animate-fade-in-up space-y-4">
-            <p className="text-center text-gray-500 text-lg">
+          <div className="flex flex-col items-center justify-center mt-4 space-y-4 animate-fade-in-up">
+            <p className="text-lg text-center text-gray-500">
               Hmm... we couldn’t find{" "}
               <span className="text-secondary">{search}</span>
             </p>

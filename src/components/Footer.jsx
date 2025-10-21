@@ -1,9 +1,9 @@
 function Footer() {
   return (
-    <div className="w-full fixed bottom-0 left-0 h-14 md:h-16 flex items-center justify-center">
+    <div className="relative p-5">
       {/* Video Background */}
       <video
-        className="absolute bottom-0 left-0 w-full h-full object-cover"
+        className="absolute inset-0 object-cover w-full"
         src="/background.mp4"
         autoPlay
         loop
@@ -12,15 +12,15 @@ function Footer() {
       ></video>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/40"></div>
+      <div className="absolute inset-0 bg-black/40" /> 
 
       {/* Footer Content */}
-      <div className="relative z-10 flex items-center justify-center text-gray-300 text-sm md:text-base">
-        <p>©2025 logo — Tous Droits Réservés</p>
+      <div className="relative flex items-center justify-center z-1">
+        <p className="text-sm text-gray-300 md:text-base">&copy;2025 logo — Tous Droits Réservés</p>
         <img
           src="/Cute-astronaut-flying-in-space_animation.gif"
-          alt="img-footer"
-          className="w-10 h-10 md:w-12 md:h-12"
+          alt="Astronaut Man"
+          className="size-10 md:size-12"
         />
       </div>
     </div>

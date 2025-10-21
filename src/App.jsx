@@ -7,11 +7,11 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className=" h-screen relative overflow-hidden">
+    <div className="flex flex-col min-h-screen overflow-hidden">
         {/* Hero Section */}
-            <Hero />
+        <Hero />
         {/* Footer with Background Video */}
-            <Footer />
+        <Footer />
     </div>
   );
 }
