@@ -12,38 +12,36 @@ function Contact() {
   };
 
   return (
-    <div className="flex flex-col w-14 h-24 fixed top-1/4 right-4 animate-fade-in-right z-50">
+    <div className="fixed z-30 flex flex-col text-white gap-y-1 top-1/4 right-4 animate-fade-in-right">
       {/* Phone icon with tooltip */}
       <div
         onClick={() => handleCopy("+212665225044 +212582258570", "phone")}
-        className="group relative bg-secondary100 text-white flex justify-center items-center cursor-pointer hover:bg-secondary duration-300 ease-in-out rounded-t-lg w-full h-full animate-bounce-slow"
+        className="relative flex items-center justify-center p-2.5 transition-colors duration-300 ease-in-out rounded-t-lg cursor-pointer group bg-secondary100 hover:bg-secondary animate-bounce-slow"
       >
-        <BiPhoneCall size={20} />
-        <span className="absolute w-40 h-full right-full mr-2 bg-secondary text-white text-sm px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap flex flex-col justify-center items-center text-center">
-          +212 (0) 665 225 044
+        <BiPhoneCall size={23} />
+        <div className="absolute px-3 py-1 mr-2 text-sm transition-opacity duration-300 rounded opacity-0 bg-secondary group-hover:opacity-100 right-full whitespace-nowrap">
+         <span>+212 (0) 665 225 044</span> 
           <br />
-          +212 (0) 582 258 570
-        </span>
+          <span>+212 (0) 582 258 570</span>
+        </div>
         {copied === "phone" && (
-          <span className="absolute right-16 bg-black text-white text-xs px-4 py-2 rounded-lg animate-fade-in">
+          <span className="absolute px-4 py-2 text-xs bg-black rounded-lg right-16 animate-fade-in">
             Copied!
           </span>
         )}
       </div>
 
-      <div className="h-1 bg-white"></div>
-
       {/* Email icon with tooltip */}
       <div
         onClick={() => handleCopy("contact@gmail.com", "email")}
-        className="group relative bg-secondary100 text-white flex justify-center items-center cursor-pointer hover:bg-secondary duration-300 ease-in-out rounded-b-lg w-full h-full shadow-xl shadow-orange-950 animate-bounce-slow delay-200"
+        className="relative flex items-center justify-center w-full h-full p-2.5 duration-300 ease-in-out transition-colors rounded-b-lg shadow-xl cursor-pointer group bg-secondary100 hover:bg-secondary shadow-gray-600 animate-bounce-slow"
       >
-        <MdOutlineMarkEmailUnread size={20} />
-        <span className="absolute w-40 h-full right-full mr-2 bg-secondary text-white text-sm px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap flex justify-center items-center">
+        <MdOutlineMarkEmailUnread size={23} />
+        <div className="absolute flex items-center justify-center w-40 h-full px-3 py-1 mr-2 text-sm transition-opacity duration-300 rounded opacity-0 right-full bg-secondary group-hover:opacity-100">
           contact@gmail.com
-        </span>
+        </div>
         {copied === "email" && (
-          <span className="absolute right-16 bg-black text-white text-xs px-4 py-2 rounded-lg animate-fade-in">
+          <span className="absolute px-4 py-2 text-xs text-white bg-black rounded-lg right-16 animate-fade-in">
             Copied!
           </span>
         )}
